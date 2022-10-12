@@ -1,9 +1,3 @@
-<!DOCTYPE html>
-<html>
-<script src="https://maps.google.com/maps/api/js?key=AIzaSyAZM3HNzqvB-_EYCWJZYRQ7D1I1Z9byZgM"></script>
-<div id="map" style="width:1024px; height:768px"></div>
-<script>
-
 var map;
 var markers = [];
 
@@ -65,7 +59,7 @@ function addMarker(bus){
 function getIcon(bus){
 	// select icon based on bus direction
 	if (bus.attributes.direction_id === 0) {
-		return 'red.png';
+		return 'orange.png';
 	}
 	    return 'blue.png';	
 }
@@ -73,7 +67,7 @@ function getIcon(bus){
 function moveMarker(marker,bus) {
 	// change icon if bus has changed direction
 	var icon = getIcon(bus);
-	marker.setIcon(icon);
+	   marker.setIcon(icon);
 
 	// move icon to new lat/lon
     marker.setPosition( {
@@ -90,6 +84,3 @@ function getMarker(id){
 }
 
 window.onload = init;
-
-</script>
-</html>
